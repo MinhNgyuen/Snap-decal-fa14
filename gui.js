@@ -96,8 +96,8 @@ IDE_Morph.uber = Morph.prototype;
 
 IDE_Morph.prototype.setDefaultDesign = function () {
     MorphicPreferences.isFlat = false;
-    SpriteMorph.prototype.paletteColor = new Color(55, 55, 55);
-    SpriteMorph.prototype.paletteTextColor = new Color(230, 230, 230);
+    SpriteMorph.prototype.paletteColor = new Color(61, 95, 110);
+    SpriteMorph.prototype.paletteTextColor = new Color(25, 51, 64);
     StageMorph.prototype.paletteTextColor
         = SpriteMorph.prototype.paletteTextColor;
     StageMorph.prototype.paletteColor = SpriteMorph.prototype.paletteColor;
@@ -105,13 +105,13 @@ IDE_Morph.prototype.setDefaultDesign = function () {
         = SpriteMorph.prototype.paletteColor.lighter(30);
 
     IDE_Morph.prototype.buttonContrast = 30;
-    IDE_Morph.prototype.backgroundColor = new Color(40, 40, 40);
+    IDE_Morph.prototype.backgroundColor = new Color(25, 51, 64);
     IDE_Morph.prototype.frameColor = SpriteMorph.prototype.paletteColor;
 
     IDE_Morph.prototype.groupColor
         = SpriteMorph.prototype.paletteColor.lighter(8);
     IDE_Morph.prototype.sliderColor = SpriteMorph.prototype.sliderColor;
-    IDE_Morph.prototype.buttonLabelColor = new Color(255, 255, 255);
+    IDE_Morph.prototype.buttonLabelColor = new Color(240, 234, 211);
     IDE_Morph.prototype.tabColors = [
         IDE_Morph.prototype.groupColor.darker(40),
         IDE_Morph.prototype.groupColor.darker(60),
@@ -119,7 +119,7 @@ IDE_Morph.prototype.setDefaultDesign = function () {
     ];
     IDE_Morph.prototype.rotationStyleColors = IDE_Morph.prototype.tabColors;
     IDE_Morph.prototype.appModeColor = new Color();
-    IDE_Morph.prototype.scriptsPaneTexture = 'scriptsPaneTexture.gif';
+    IDE_Morph.prototype.scriptsPaneTexture = new Color(240, 234, 211);
     IDE_Morph.prototype.padding = 5;
 
     SpriteIconMorph.prototype.labelColor
@@ -134,20 +134,20 @@ IDE_Morph.prototype.setDefaultDesign = function () {
 
 IDE_Morph.prototype.setFlatDesign = function () {
     MorphicPreferences.isFlat = true;
-    SpriteMorph.prototype.paletteColor = new Color(255, 255, 255);
-    SpriteMorph.prototype.paletteTextColor = new Color(70, 70, 70);
+    SpriteMorph.prototype.paletteColor = new Color(240, 234, 211);
+    SpriteMorph.prototype.paletteTextColor = new Color(240, 234, 211);
     StageMorph.prototype.paletteTextColor
         = SpriteMorph.prototype.paletteTextColor;
     StageMorph.prototype.paletteColor = SpriteMorph.prototype.paletteColor;
     SpriteMorph.prototype.sliderColor = SpriteMorph.prototype.paletteColor;
 
     IDE_Morph.prototype.buttonContrast = 30;
-    IDE_Morph.prototype.backgroundColor = new Color(200, 200, 200);
-    IDE_Morph.prototype.frameColor = new Color(255, 255, 255);
+    IDE_Morph.prototype.backgroundColor = new Color(240, 234, 211);
+    IDE_Morph.prototype.frameColor = new Color(240, 234, 211);
 
     IDE_Morph.prototype.groupColor = new Color(230, 230, 230);
     IDE_Morph.prototype.sliderColor = SpriteMorph.prototype.sliderColor;
-    IDE_Morph.prototype.buttonLabelColor = new Color(70, 70, 70);
+    IDE_Morph.prototype.buttonLabelColor = new Color(240, 234, 211);
     IDE_Morph.prototype.tabColors = [
         IDE_Morph.prototype.groupColor.lighter(60),
         IDE_Morph.prototype.groupColor.darker(10),
@@ -159,7 +159,7 @@ IDE_Morph.prototype.setFlatDesign = function () {
         IDE_Morph.prototype.groupColor.darker(30)
     ];
     IDE_Morph.prototype.appModeColor = IDE_Morph.prototype.frameColor;
-    IDE_Morph.prototype.scriptsPaneTexture = null;
+    IDE_Morph.prototype.scriptsPaneTexture = new Color(25, 51, 64);
     IDE_Morph.prototype.padding = 1;
 
     SpriteIconMorph.prototype.labelColor
@@ -409,7 +409,7 @@ IDE_Morph.prototype.createLogo = function () {
     }
 
     this.logo = new Morph();
-    this.logo.texture = 'snap_logo_sm.png';
+    this.logo.texture = new Color(25, 51, 64);
     this.logo.drawNew = function () {
         this.image = newCanvas(this.extent());
         var context = this.image.getContext('2d'),
@@ -1147,7 +1147,7 @@ IDE_Morph.prototype.createSpriteEditor = function () {
     if (this.currentTab === 'scripts') {
         scripts.isDraggable = false;
         scripts.color = this.groupColor;
-        scripts.texture = this.scriptsPaneTexture;
+        scripts.texture = new Color(25, 51, 64);
 
         this.spriteEditor = new ScrollFrameMorph(
             scripts,
@@ -3482,7 +3482,7 @@ IDE_Morph.prototype.userSetBlocksScale = function () {
 
     sample = new FrameMorph();
     sample.acceptsDrops = false;
-    sample.texture = this.scriptsPaneTexture;
+    sample.texture = 'm6rT4MYFQ7CT8j9m2AEC_JakeGivens - Sunset in the Park.jpeg';;
     sample.setExtent(new Point(250, 180));
     scrpt.setPosition(sample.position().add(10));
     sample.add(scrpt);
@@ -4226,7 +4226,7 @@ ProjectDialogMorph.prototype.buildContents = function () {
     this.preview.drawNew = function () {
         InputFieldMorph.prototype.drawNew.call(this);
         if (this.texture) {
-            this.drawTexture(this.texture);
+            this.drawTexture('m6rT4MYFQ7CT8j9m2AEC_JakeGivens - Sunset in the Park.jpeg');
         }
     };
     this.preview.drawCachedTexture = function () {
